@@ -32,7 +32,7 @@ final class MockHttpOverrides extends HttpOverrides {
   HttpClient createHttpClient(SecurityContext? context) {
     return FakeHttpClient((request, client) async {
       debugPrint('Received network request:');
-      final body = File('test/assets/file.bmp').readAsBytesSync();
+      final body = File('test/assets/green_square.bmp').readAsBytesSync();
 
       debugPrint('Responding with network image: ${body.length} bytes');
       return FakeHttpResponse(
