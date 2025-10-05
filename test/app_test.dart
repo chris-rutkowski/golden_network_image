@@ -17,7 +17,7 @@ void main() {
     // Solution:
     // ???
 
-    await widgetTester.pumpAndSettle(); // doesn't add any value
+    await widgetTester.pumpAndSettle(Duration(seconds: 1)); // doesn't add any value
     await widgetTester.pump(Duration(seconds: 1)); // doesn't add any value
     await expectLater(finder, matchesGoldenFile('first.png'));
 
